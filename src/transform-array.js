@@ -29,14 +29,12 @@ function transform(arr) {
     }
     if (res[i] === "--discard-next") {
       if (res[i + 1]) {
-        res[i] = null;
-        res[i + 1] = null;
+        res[i] = res[i + 1] = null;
       } else res[i] = null;
     }
     if (res[i] === "--discard-prev") {
       if (res[i - 1]) {
-        res[i] = null;
-        res[i - 1] = null;
+        res[i] = res[i - 1] = null;
       } else res[i] = null;
     }
   }
